@@ -1,10 +1,10 @@
 package org.util;
 
-public class No {
-    private String conteudo;
-    private No proximoNo;
+public class No<T> {
+    private T conteudo;
+    private No<T> proximoNo;
 
-    public No(String conteudo) {
+    public No(T conteudo) {
         this.proximoNo = null;
         this.conteudo = conteudo;
     }
@@ -13,7 +13,7 @@ public class No {
         this.proximoNo = proximoNo;
     }
 
-    public No getProximoNo() {
+    public No<T> getProximoNo() {
         return proximoNo;
     }
 
