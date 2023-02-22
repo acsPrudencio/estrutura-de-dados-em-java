@@ -2,19 +2,20 @@ package org.util;
 
 public class No<T> {
     private T conteudo;
-    private No<T> proximoNo;
+    private No<T> refNode = null;
 
     public No(T conteudo) {
-        this.proximoNo = null;
+        this.refNode = null;
         this.conteudo = conteudo;
     }
+    public No(){}
 
-    public void setProximoNo(No proximoNo) {
-        this.proximoNo = proximoNo;
+    public void setRefNode(No refNode) {
+        this.refNode = refNode;
     }
 
-    public No<T> getProximoNo() {
-        return proximoNo;
+    public No<T> getRefNode() {
+        return refNode;
     }
 
     @Override
